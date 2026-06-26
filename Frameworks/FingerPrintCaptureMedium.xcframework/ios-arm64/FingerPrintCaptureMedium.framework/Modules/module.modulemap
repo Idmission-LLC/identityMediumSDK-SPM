@@ -1,0 +1,11 @@
+framework module FingerPrintCaptureMedium {
+  umbrella header "FingerPrintCaptureMedium.h"
+  export *
+
+  module * { export * }
+}
+
+module FingerPrintCaptureMedium.Swift {
+  header "FingerPrintCaptureMedium-Swift.h"
+  requires objc
+}

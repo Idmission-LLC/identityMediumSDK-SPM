@@ -1,0 +1,11 @@
+framework module IDentityMediumSDK {
+  umbrella header "IDentityMediumSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module IDentityMediumSDK.Swift {
+  header "IDentityMediumSDK-Swift.h"
+  requires objc
+}

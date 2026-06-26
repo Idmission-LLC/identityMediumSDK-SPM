@@ -1,0 +1,41 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IDCaptureMedium
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AudioToolbox
+import CoreGraphics
+import DeveloperToolsSupport
+import Foundation
+import IDentityMediumSDK
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct ValidateIdResult {
+  public var front: IDentityMediumSDK.DetectedData
+  public var back: IDentityMediumSDK.DetectedData?
+  public func finalSubmit(completion: @escaping IDentityMediumSDK.ValidateIdAPICompletion)
+}
+public typealias ValidateIdCompletion = (_ result: Swift.Result<IDCaptureMedium.ValidateIdResult, any Swift.Error>) -> Swift.Void
+extension IDentityMediumSDK.IDentitySDK {
+  public static var customerValidateIdRequest: IDentityMediumSDK.CustomerValidateIdRequest?
+  public static var customerValidateSecondaryIdRequest: IDentityMediumSDK.CustomerValidateIdRequest?
+  public class func idValidation(from presenter: UIKit.UIViewController, customerDataOptions: IDentityMediumSDK.CommonCustomerDataRequest? = nil, options: IDentityMediumSDK.AdditionalCustomerWFlagCommonData, captureBack: IDentityMediumSDK.CaptureBack = .auto, isSecondaryID: Swift.Bool = false, completion: @escaping IDCaptureMedium.ValidateIdCompletion)
+  public class func idValidation(from presenter: UIKit.UIViewController, customerDataOptions: IDentityMediumSDK.CommonCustomerDataRequest? = nil, options: IDentityMediumSDK.AdditionalCustomerWFlagCommonData, idType: Swift.String, idCountry: Swift.String, idState: Swift.String?, isSecondaryID: Swift.Bool = false, completion: @escaping IDCaptureMedium.ValidateIdCompletion)
+  public class func idValidation(from presenter: UIKit.UIViewController, customerDataOptions: IDentityMediumSDK.CommonCustomerDataRequest?, options: IDentityMediumSDK.AdditionalCustomerWFlagCommonData, captureBack: Swift.Int?, idType: Swift.String?, idCountry: Swift.String?, idState: Swift.String?, isSecondaryID: Swift.Bool = false, completion: @escaping IDCaptureMedium.ValidateIdCompletion)
+  public class func autofill(from presenter: UIKit.UIViewController, captureIdSide: IDentityMediumSDK.AutofillCaptureIdSide, completion: @escaping IDentityMediumSDK.AutofillAPICompletion)
+}
+extension IDentityMediumSDK.StateMasterVO : Swift.Equatable {
+  public static func == (lhs: IDentityMediumSDK.StateMasterVO, rhs: IDentityMediumSDK.StateMasterVO) -> Swift.Bool
+}
+extension Foundation.UserDefaults {
+  public static var realIdNotDetectedCount: Swift.Int {
+    get
+    set
+  }
+}
+extension IDentityMediumSDK.CountryMaster : Swift.Equatable {
+  public static func == (lhs: IDentityMediumSDK.CountryMaster, rhs: IDentityMediumSDK.CountryMaster) -> Swift.Bool
+}

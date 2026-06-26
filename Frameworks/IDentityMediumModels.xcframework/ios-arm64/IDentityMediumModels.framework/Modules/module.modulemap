@@ -1,0 +1,6 @@
+framework module IDentityMediumModels {
+  umbrella header "IDentityMediumModels.h"
+  export *
+
+  module * { export * }
+}

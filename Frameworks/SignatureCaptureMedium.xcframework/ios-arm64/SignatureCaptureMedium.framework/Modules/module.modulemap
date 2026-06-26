@@ -1,0 +1,11 @@
+framework module SignatureCaptureMedium {
+  umbrella header "SignatureCaptureMedium.h"
+  export *
+
+  module * { export * }
+}
+
+module SignatureCaptureMedium.Swift {
+  header "SignatureCaptureMedium-Swift.h"
+  requires objc
+}
