@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IDCaptureMedium
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name IDCaptureMedium
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AudioToolbox
 import CoreGraphics
 import DeveloperToolsSupport
@@ -22,9 +22,15 @@ public typealias ValidateIdCompletion = (_ result: Swift.Result<IDCaptureMedium.
 extension IDentityMediumSDK.IDentitySDK {
   public static var customerValidateIdRequest: IDentityMediumSDK.CustomerValidateIdRequest?
   public static var customerValidateSecondaryIdRequest: IDentityMediumSDK.CustomerValidateIdRequest?
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func idValidation(from presenter: UIKit.UIViewController, customerDataOptions: IDentityMediumSDK.CommonCustomerDataRequest? = nil, options: IDentityMediumSDK.AdditionalCustomerWFlagCommonData, captureBack: IDentityMediumSDK.CaptureBack = .auto, isSecondaryID: Swift.Bool = false, completion: @escaping IDCaptureMedium.ValidateIdCompletion)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func idValidation(from presenter: UIKit.UIViewController, customerDataOptions: IDentityMediumSDK.CommonCustomerDataRequest? = nil, options: IDentityMediumSDK.AdditionalCustomerWFlagCommonData, idType: Swift.String, idCountry: Swift.String, idState: Swift.String?, isSecondaryID: Swift.Bool = false, completion: @escaping IDCaptureMedium.ValidateIdCompletion)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func idValidation(from presenter: UIKit.UIViewController, customerDataOptions: IDentityMediumSDK.CommonCustomerDataRequest?, options: IDentityMediumSDK.AdditionalCustomerWFlagCommonData, captureBack: Swift.Int?, idType: Swift.String?, idCountry: Swift.String?, idState: Swift.String?, isSecondaryID: Swift.Bool = false, completion: @escaping IDCaptureMedium.ValidateIdCompletion)
+  #endif
   public class func autofill(from presenter: UIKit.UIViewController, captureIdSide: IDentityMediumSDK.AutofillCaptureIdSide, completion: @escaping IDentityMediumSDK.AutofillAPICompletion)
 }
 extension IDentityMediumSDK.StateMasterVO : Swift.Equatable {
