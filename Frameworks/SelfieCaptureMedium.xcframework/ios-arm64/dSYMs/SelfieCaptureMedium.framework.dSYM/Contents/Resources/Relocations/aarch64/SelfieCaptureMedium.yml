@@ -2,8 +2,8 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/amold/Library/Developer/Xcode/DerivedData/idmissioniossdk-medium/Build/Products/Release-iphoneos/SelfieCaptureMedium.framework/SelfieCaptureMedium'
 relocations:
-  - { offset: 0x852C1, size: 0x8, addend: 0x0, symName: _SelfieCaptureMediumVersionString, symObjAddr: 0x0, symBinAddr: 0x36830, symSize: 0x0 }
-  - { offset: 0x852F6, size: 0x8, addend: 0x0, symName: _SelfieCaptureMediumVersionNumber, symObjAddr: 0x38, symBinAddr: 0x36868, symSize: 0x0 }
+  - { offset: 0x852C1, size: 0x8, addend: 0x0, symName: _SelfieCaptureMediumVersionString, symObjAddr: 0x0, symBinAddr: 0x36870, symSize: 0x0 }
+  - { offset: 0x852F6, size: 0x8, addend: 0x0, symName: _SelfieCaptureMediumVersionNumber, symObjAddr: 0x38, symBinAddr: 0x368A8, symSize: 0x0 }
   - { offset: 0x85731, size: 0x8, addend: 0x0, symName: '_$s19SelfieCaptureMedium0aB21PreviewViewControllerCfETo', symObjAddr: 0x1630, symBinAddr: 0x5620, symSize: 0xA8 }
   - { offset: 0x85760, size: 0x8, addend: 0x0, symName: '_$s19SelfieCaptureMedium0aB21PreviewViewControllerCMU', symObjAddr: 0x16D8, symBinAddr: 0x56C8, symSize: 0x8 }
   - { offset: 0x85774, size: 0x8, addend: 0x0, symName: '_$s19SelfieCaptureMedium0aB21PreviewViewControllerCMa', symObjAddr: 0x16E0, symBinAddr: 0x56D0, symSize: 0x38 }

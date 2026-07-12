@@ -2,8 +2,8 @@
 triple:          'x86_64-apple-darwin'
 binary-path:     '/Users/amold/Library/Developer/Xcode/DerivedData/idmissioniossdk-medium/Build/Products/Release-iphonesimulator/IDentityMediumSDK.framework/IDentityMediumSDK'
 relocations:
-  - { offset: 0x1A5FD5, size: 0x8, addend: 0x0, symName: _IDentityMediumSDKVersionString, symObjAddr: 0x0, symBinAddr: 0x21F0B00, symSize: 0x0 }
-  - { offset: 0x1A600A, size: 0x8, addend: 0x0, symName: _IDentityMediumSDKVersionNumber, symObjAddr: 0x38, symBinAddr: 0x21F0B38, symSize: 0x0 }
+  - { offset: 0x1A5FD5, size: 0x8, addend: 0x0, symName: _IDentityMediumSDKVersionString, symObjAddr: 0x0, symBinAddr: 0x21F0AC0, symSize: 0x0 }
+  - { offset: 0x1A600A, size: 0x8, addend: 0x0, symName: _IDentityMediumSDKVersionNumber, symObjAddr: 0x38, symBinAddr: 0x21F0AF8, symSize: 0x0 }
   - { offset: 0x1A6046, size: 0x8, addend: 0x0, symName: _xsltFreeLocales, symObjAddr: 0x0, symBinAddr: 0x23C0, symSize: 0x6 }
   - { offset: 0x1A615B, size: 0x8, addend: 0x0, symName: _xsltFreeLocales, symObjAddr: 0x0, symBinAddr: 0x23C0, symSize: 0x6 }
   - { offset: 0x1A61AD, size: 0x8, addend: 0x0, symName: _xsltNewLocale, symObjAddr: 0x6, symBinAddr: 0x23C6, symSize: 0x6FA }
@@ -139,10 +139,10 @@ relocations:
   - { offset: 0x1BA08D, size: 0x8, addend: 0x0, symName: _xsltFreeDocumentKeys, symObjAddr: 0xE65, symBinAddr: 0xADB1, symSize: 0x77 }
   - { offset: 0x1BA15A, size: 0x8, addend: 0x0, symName: _xsltFreeNodeSetEntry, symObjAddr: 0xEDC, symBinAddr: 0xAE28, symSize: 0xA }
   - { offset: 0x1BA247, size: 0x8, addend: 0x0, symName: _exsltDateRegister, symObjAddr: 0x0, symBinAddr: 0xAE34, symSize: 0x239 }
-  - { offset: 0x1BA26F, size: 0x8, addend: 0x0, symName: _daysInMonthLeap, symObjAddr: 0x55A0, symBinAddr: 0x21F0D60, symSize: 0x0 }
-  - { offset: 0x1BA29D, size: 0x8, addend: 0x0, symName: _daysInMonth, symObjAddr: 0x5600, symBinAddr: 0x21F0DC0, symSize: 0x0 }
-  - { offset: 0x1BA2BF, size: 0x8, addend: 0x0, symName: _dayInLeapYearByMonth, symObjAddr: 0x5690, symBinAddr: 0x21F0E50, symSize: 0x0 }
-  - { offset: 0x1BA2D5, size: 0x8, addend: 0x0, symName: _dayInYearByMonth, symObjAddr: 0x56F0, symBinAddr: 0x21F0EB0, symSize: 0x0 }
+  - { offset: 0x1BA26F, size: 0x8, addend: 0x0, symName: _daysInMonthLeap, symObjAddr: 0x55A0, symBinAddr: 0x21F0D20, symSize: 0x0 }
+  - { offset: 0x1BA29D, size: 0x8, addend: 0x0, symName: _daysInMonth, symObjAddr: 0x5600, symBinAddr: 0x21F0D80, symSize: 0x0 }
+  - { offset: 0x1BA2BF, size: 0x8, addend: 0x0, symName: _dayInLeapYearByMonth, symObjAddr: 0x5690, symBinAddr: 0x21F0E10, symSize: 0x0 }
+  - { offset: 0x1BA2D5, size: 0x8, addend: 0x0, symName: _dayInYearByMonth, symObjAddr: 0x56F0, symBinAddr: 0x21F0E70, symSize: 0x0 }
   - { offset: 0x1BA42B, size: 0x8, addend: 0x0, symName: _exsltDateRegister, symObjAddr: 0x0, symBinAddr: 0xAE34, symSize: 0x239 }
   - { offset: 0x1BA805, size: 0x8, addend: 0x0, symName: _exsltDateAddFunction, symObjAddr: 0x239, symBinAddr: 0xB06D, symSize: 0x8BB }
   - { offset: 0x1BAC2E, size: 0x8, addend: 0x0, symName: _exsltDateParse, symObjAddr: 0x2D28, symBinAddr: 0xDB5C, symSize: 0x5BE }
@@ -197,11 +197,11 @@ relocations:
   - { offset: 0x1C05C9, size: 0x8, addend: 0x0, symName: _xsltRegisterAllExtras, symObjAddr: 0x2E6, symBinAddr: 0x102ED, symSize: 0xEA }
   - { offset: 0x1C07E1, size: 0x8, addend: 0x0, symName: _xsltInit, symObjAddr: 0x0, symBinAddr: 0x103D7, symSize: 0x1C }
   - { offset: 0x1C0809, size: 0x8, addend: 0x0, symName: _xsltEngineVersion, symObjAddr: 0x4440, symBinAddr: 0x2A10578, symSize: 0x0 }
-  - { offset: 0x1C0829, size: 0x8, addend: 0x0, symName: _xsltLibxsltVersion, symObjAddr: 0x4448, symBinAddr: 0x21F1024, symSize: 0x0 }
-  - { offset: 0x1C084B, size: 0x8, addend: 0x0, symName: _xsltLibxmlVersion, symObjAddr: 0x444C, symBinAddr: 0x21F1028, symSize: 0x0 }
+  - { offset: 0x1C0829, size: 0x8, addend: 0x0, symName: _xsltLibxsltVersion, symObjAddr: 0x4448, symBinAddr: 0x21F0FE4, symSize: 0x0 }
+  - { offset: 0x1C084B, size: 0x8, addend: 0x0, symName: _xsltLibxmlVersion, symObjAddr: 0x444C, symBinAddr: 0x21F0FE8, symSize: 0x0 }
   - { offset: 0x1C0861, size: 0x8, addend: 0x0, symName: _initialized, symObjAddr: 0x1384C, symBinAddr: 0x2AEF320, symSize: 0x0 }
   - { offset: 0x1C0872, size: 0x8, addend: 0x0, symName: _xsltNewDecimalFormat, symObjAddr: 0x2BFD, symBinAddr: 0x12FD4, symSize: 0xE3 }
-  - { offset: 0x1C089A, size: 0x8, addend: 0x0, symName: _xsltNewDecimalFormat.permille, symObjAddr: 0x4450, symBinAddr: 0x21F102C, symSize: 0x0 }
+  - { offset: 0x1C089A, size: 0x8, addend: 0x0, symName: _xsltNewDecimalFormat.permille, symObjAddr: 0x4450, symBinAddr: 0x21F0FEC, symSize: 0x0 }
   - { offset: 0x1C1955, size: 0x8, addend: 0x0, symName: _xsltInit, symObjAddr: 0x0, symBinAddr: 0x103D7, symSize: 0x1C }
   - { offset: 0x1C1980, size: 0x8, addend: 0x0, symName: _xsltUninit, symObjAddr: 0x1C, symBinAddr: 0x103F3, symSize: 0xD }
   - { offset: 0x1C1996, size: 0x8, addend: 0x0, symName: _xsltIsBlank, symObjAddr: 0x29, symBinAddr: 0x10400, symSize: 0x35 }
@@ -411,7 +411,7 @@ relocations:
   - { offset: 0x1CEFD1, size: 0x8, addend: 0x0, symName: _mz_stream_buffered_delete, symObjAddr: 0x516, symBinAddr: 0x18950, symSize: 0x24 }
   - { offset: 0x1CF027, size: 0x8, addend: 0x0, symName: _mz_stream_buffered_get_interface, symObjAddr: 0x53A, symBinAddr: 0x18974, symSize: 0xD }
   - { offset: 0x1CF097, size: 0x8, addend: 0x0, symName: _mz_crypt_rand, symObjAddr: 0x0, symBinAddr: 0x18984, symSize: 0x2E }
-  - { offset: 0x1CF0B1, size: 0x8, addend: 0x0, symName: _mz_crypt_sha_digest_size, symObjAddr: 0x767, symBinAddr: 0x21F1030, symSize: 0x0 }
+  - { offset: 0x1CF0B1, size: 0x8, addend: 0x0, symName: _mz_crypt_sha_digest_size, symObjAddr: 0x767, symBinAddr: 0x21F0FF0, symSize: 0x0 }
   - { offset: 0x1CF1E7, size: 0x8, addend: 0x0, symName: _mz_crypt_rand, symObjAddr: 0x0, symBinAddr: 0x18984, symSize: 0x2E }
   - { offset: 0x1CF263, size: 0x8, addend: 0x0, symName: _mz_crypt_sha_reset, symObjAddr: 0x2E, symBinAddr: 0x189B2, symSize: 0x11 }
   - { offset: 0x1CF2AA, size: 0x8, addend: 0x0, symName: _mz_crypt_sha_begin, symObjAddr: 0x3F, symBinAddr: 0x189C3, symSize: 0xA9 }
@@ -776,7 +776,7 @@ relocations:
   - { offset: 0x1F0BB4, size: 0x8, addend: 0x0, symName: '+[SSZipArchive _filenameStringWithCString:version_made_by:general_purpose_flag:size:]', symObjAddr: 0x4DE5, symBinAddr: 0x2EBD7, symSize: 0xE9 }
   - { offset: 0x1F0CF0, size: 0x8, addend: 0x0, symName: '+[SSZipArchive zipInfo:setAttributesOfItemAtPath:]', symObjAddr: 0x4ECE, symBinAddr: 0x2ECC0, symSize: 0x1C1 }
   - { offset: 0x1F0F14, size: 0x8, addend: 0x0, symName: '+[SSZipArchive zipInfo:setDate:]', symObjAddr: 0x508F, symBinAddr: 0x2EE81, symSize: 0x117 }
-  - { offset: 0x1F111B, size: 0x8, addend: 0x0, symName: '+[SSZipArchive _gregorian].cold.1', symObjAddr: 0x584A, symBinAddr: 0x21D929F, symSize: 0x18 }
+  - { offset: 0x1F111B, size: 0x8, addend: 0x0, symName: '+[SSZipArchive _gregorian].cold.1', symObjAddr: 0x584A, symBinAddr: 0x21D922F, symSize: 0x18 }
   - { offset: 0x1F114A, size: 0x8, addend: 0x0, symName: '___26+[SSZipArchive _gregorian]_block_invoke', symObjAddr: 0x51C8, symBinAddr: 0x2EFBA, symSize: 0x3F }
   - { offset: 0x1F118B, size: 0x8, addend: 0x0, symName: '-[SSZipArchive .cxx_destruct]', symObjAddr: 0x530C, symBinAddr: 0x2F0FE, symSize: 0x10 }
   - { offset: 0x1F11BE, size: 0x8, addend: 0x0, symName: '-[NSData(SSZipArchive) _base64RFC4648]', symObjAddr: 0x531C, symBinAddr: 0x2F10E, symSize: 0xA0 }
@@ -1020,9 +1020,9 @@ relocations:
   - { offset: 0x209F37, size: 0x8, addend: 0x0, symName: _xsltFreeNamespaceAliasHashes, symObjAddr: 0x75C, symBinAddr: 0x3BBE9, symSize: 0x2E }
   - { offset: 0x20A023, size: 0x8, addend: 0x0, symName: _exsltRegisterAll, symObjAddr: 0x0, symBinAddr: 0x3BC17, symSize: 0x32 }
   - { offset: 0x20A04B, size: 0x8, addend: 0x0, symName: _exsltLibraryVersion, symObjAddr: 0x50, symBinAddr: 0x2A10918, symSize: 0x0 }
-  - { offset: 0x20A06B, size: 0x8, addend: 0x0, symName: _exsltLibexsltVersion, symObjAddr: 0x58, symBinAddr: 0x21F110C, symSize: 0x0 }
-  - { offset: 0x20A08D, size: 0x8, addend: 0x0, symName: _exsltLibxsltVersion, symObjAddr: 0x5C, symBinAddr: 0x21F1110, symSize: 0x0 }
-  - { offset: 0x20A0A3, size: 0x8, addend: 0x0, symName: _exsltLibxmlVersion, symObjAddr: 0x60, symBinAddr: 0x21F1114, symSize: 0x0 }
+  - { offset: 0x20A06B, size: 0x8, addend: 0x0, symName: _exsltLibexsltVersion, symObjAddr: 0x58, symBinAddr: 0x21F10CC, symSize: 0x0 }
+  - { offset: 0x20A08D, size: 0x8, addend: 0x0, symName: _exsltLibxsltVersion, symObjAddr: 0x5C, symBinAddr: 0x21F10D0, symSize: 0x0 }
+  - { offset: 0x20A0A3, size: 0x8, addend: 0x0, symName: _exsltLibxmlVersion, symObjAddr: 0x60, symBinAddr: 0x21F10D4, symSize: 0x0 }
   - { offset: 0x20A0AD, size: 0x8, addend: 0x0, symName: _exsltRegisterAll, symObjAddr: 0x0, symBinAddr: 0x3BC17, symSize: 0x32 }
   - { offset: 0x20A1FD, size: 0x8, addend: 0x0, symName: _xsltFreeExts, symObjAddr: 0x0, symBinAddr: 0x3BC49, symSize: 0x47 }
   - { offset: 0x20A225, size: 0x8, addend: 0x0, symName: _xsltExtensionsHash, symObjAddr: 0xF9F0, symBinAddr: 0x2AEF760, symSize: 0x0 }
