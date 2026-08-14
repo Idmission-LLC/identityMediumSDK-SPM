@@ -52,57 +52,9 @@
 		<data>
 		E0P+ApXLYwZvbg5UNrhD8PKvj6M=
 		</data>
-		<key>FBLPromises_Privacy.bundle/Info.plist</key>
-		<data>
-		s6qcuOa9aAKfHlSFsO8M02rAY1c=
-		</data>
-		<key>FBLPromises_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		ZajnvEs/MYRS3X4TPLAhBWi8mc4=
-		</data>
 		<key>GET_XSLT_DATA.json</key>
 		<data>
 		r4pT4tYjepBLh4NXSpKs3Pp+qDM=
-		</data>
-		<key>GTMSessionFetcher_Core_Privacy.bundle/Info.plist</key>
-		<data>
-		/SkTZUI+aAhqXZJpHvwpcMBFM0k=
-		</data>
-		<key>GTMSessionFetcher_Core_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		GqeAMkwbcNQeG0K4qQhQh2vHhHo=
-		</data>
-		<key>GoogleDataTransport_Privacy.bundle/Info.plist</key>
-		<data>
-		Y/KwfmiumXQZlwl9G1ydgsMMbPk=
-		</data>
-		<key>GoogleDataTransport_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		WXQUJr75eMRgiVnLGyf8Gr3uLUU=
-		</data>
-		<key>GoogleToolboxForMac_Logger_Privacy.bundle/Info.plist</key>
-		<data>
-		J+46EwILs2B7DbAcATBM0TIgLwQ=
-		</data>
-		<key>GoogleToolboxForMac_Logger_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		GqeAMkwbcNQeG0K4qQhQh2vHhHo=
-		</data>
-		<key>GoogleToolboxForMac_Privacy.bundle/Info.plist</key>
-		<data>
-		11wpyjMD8Nrm+Ei/5xFH8K+gz+o=
-		</data>
-		<key>GoogleToolboxForMac_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		ZajnvEs/MYRS3X4TPLAhBWi8mc4=
-		</data>
-		<key>GoogleUtilities_Privacy.bundle/Info.plist</key>
-		<data>
-		GxtyYY+pIbTYiO7blISTxOrab5U=
-		</data>
-		<key>GoogleUtilities_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		9Dge7JFNlx7Vk430tsjNsK3d0Ng=
 		</data>
 		<key>Headers/CommonClass.h</key>
 		<data>
@@ -110,7 +62,7 @@
 		</data>
 		<key>Headers/IDentityMediumSDK-Swift.h</key>
 		<data>
-		mqhbq7+ThH3QYkgDmNuvwS7jCDE=
+		WzePodxyTy7bnncPrfQdJFkUP9k=
 		</data>
 		<key>Headers/IDentityMediumSDK.h</key>
 		<data>
@@ -262,67 +214,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jlPBLYzUCfRvBuPY6q3LwiKCWDk=
+		lqcv2GH/bToHtayKHE/Mbvk2Jpc=
 		</data>
 		<key>LICENSE</key>
 		<data>
 		F6LTl+RBugQ3i5tHJ0u0h632bEQ=
 		</data>
-		<key>LatinOCRResources.bundle/Info.plist</key>
-		<data>
-		oHJnNkYg9mOPLaXFXY0tViLnqB0=
-		</data>
-		<key>LatinOCRResources.bundle/region_proposal_text_detector_tflite_gray_quantized.bincfg</key>
-		<data>
-		V2ROSYH9TDZ87SKQfYmC78jkabg=
-		</data>
-		<key>LatinOCRResources.bundle/rpn_lstm_engine_tflite_latin.bincfg</key>
-		<data>
-		W+TF/C0djllwb4ejtlbbwoqIOaA=
-		</data>
-		<key>LatinOCRResources.bundle/rpn_text_detector_mobile_space_to_depth_quantized_v2.tflite</key>
-		<data>
-		6ny23cax5EGQNgpJKSnhJUhpxtQ=
-		</data>
-		<key>LatinOCRResources.bundle/tflite_langid.tflite</key>
-		<data>
-		/LcQXDvm1hHXPLE3IVulrhpZePE=
-		</data>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.bincfg</key>
-		<data>
-		66UmXr+gf7XJ71vLnqjAwes9Mnw=
-		</data>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.class_lst</key>
-		<data>
-		68PK2+uslXMmEpqkRadeVy2t0PE=
-		</data>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.conv_model</key>
-		<data>
-		BQIj06B3MVer0TIFCE1lwPQqAQ8=
-		</data>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.lstm_model</key>
-		<data>
-		oYS7+p9yJEEy3UOE1YgjDNNbLAM=
-		</data>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		UHhYN+MEsWi47hNDR3JRmziKihA=
+		GwKeDE6W8yQj2B1saMv06uxf3XY=
 		</data>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		So6ZZCuO0P0Up2Jz5VOCLzgSmro=
+		BrdEeDHnHzMvduQcjrIiZ0W3dBU=
 		</data>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		IyMh4imQBhevSO2s53K/T6yXLco=
+		8JRe5kcNR9LCLbjib4BWknXfSMc=
 		</data>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		So6ZZCuO0P0Up2Jz5VOCLzgSmro=
+		BrdEeDHnHzMvduQcjrIiZ0W3dBU=
 		</data>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MHcRcovwr9Izd1mrjCrSKQHPLJU=
+		oFBVbimFoRmMb+2jDmdkdJecPhc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -336,13 +252,17 @@
 		<data>
 		Vwq5XkLRRMhgBZjUYTYw8eBjt+U=
 		</data>
-		<key>nanopb_Privacy.bundle/Info.plist</key>
+		<key>ppocr_keys_v6_ascii.txt</key>
 		<data>
-		dD4y5ZO2m+AcyoOAdIclEIPbxU0=
+		gXBOWQlF1bNkLUHPqwgsrzGqaG0=
 		</data>
-		<key>nanopb_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<key>ppocr_v6_det.tflite</key>
 		<data>
-		KY5lfwC2TvsgFj4wt7hkMmainbs=
+		385WDf8WyKkeSPvyZ6kLPwqM9eI=
+		</data>
+		<key>ppocr_v6_rec_96-CharSet_960-Width.tflite</key>
+		<data>
+		AMzEE4solY05ZSM7of3s0Fm8ghc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -431,95 +351,11 @@
 			XqzO6fuK3R5Q5oQjQP62jw/76WDDg4ONF0/hsoGEVxw=
 			</data>
 		</dict>
-		<key>FBLPromises_Privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0urkoBIsYyxq1FEL2uKM6OECHUQjjYZB6aP0p1MqVZQ=
-			</data>
-		</dict>
-		<key>FBLPromises_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dLDNcvwjwe8wLyLuJ1P2GBfNxa8P96fy0GMrUk+4rOo=
-			</data>
-		</dict>
 		<key>GET_XSLT_DATA.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			+X0nw/ckaF0YzKlkavzT6AedsjUBqeh7isqyOgtA1VE=
-			</data>
-		</dict>
-		<key>GTMSessionFetcher_Core_Privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			AGAQWbcFTR7RESWD7RSCYrSyi/7/RdYjGiQk0GUFmVc=
-			</data>
-		</dict>
-		<key>GTMSessionFetcher_Core_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PkqTy+hqzvfdfgY6KMhJmS9Vbn9SytxfN8HosOG1RoY=
-			</data>
-		</dict>
-		<key>GoogleDataTransport_Privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			R6kboBo6iO0viBvGkgyYGDFlN5Z28Ft2Qi260+ZwDys=
-			</data>
-		</dict>
-		<key>GoogleDataTransport_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			z7s8T3ambVNpi66R9xEMAPIUjm5vE619MlkpCbwBDlE=
-			</data>
-		</dict>
-		<key>GoogleToolboxForMac_Logger_Privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fR+6L5t6FaWj4if3yUWEgD2JAc8Nu/9qkEw4vGPux2k=
-			</data>
-		</dict>
-		<key>GoogleToolboxForMac_Logger_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PkqTy+hqzvfdfgY6KMhJmS9Vbn9SytxfN8HosOG1RoY=
-			</data>
-		</dict>
-		<key>GoogleToolboxForMac_Privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ptld9rGDjarPHUZrOzP+NjQL/kysVKy2bllMXukFGuk=
-			</data>
-		</dict>
-		<key>GoogleToolboxForMac_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dLDNcvwjwe8wLyLuJ1P2GBfNxa8P96fy0GMrUk+4rOo=
-			</data>
-		</dict>
-		<key>GoogleUtilities_Privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			AntYYNFtI/zFIgAePwR1T3XFKF1MU6p2ciSqvaE5eIk=
-			</data>
-		</dict>
-		<key>GoogleUtilities_Privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+Btc+PBDZicS7KnpeFdnJkzxkAJf5720l3cpbAaN5Tw=
 			</data>
 		</dict>
 		<key>Headers/CommonClass.h</key>
@@ -533,7 +369,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LhHOWLBjP7qtaBEp1Jg5PAQovdBqnaSW8UkRC+/3L30=
+			f4M0Ui4s0JroRoi19TOHyKRbL1mlqZbJ404paWiVjHc=
 			</data>
 		</dict>
 		<key>Headers/IDentityMediumSDK.h</key>
@@ -802,102 +638,39 @@
 			Z1GBwD/BMCochVTAD3vpu0IMXbydzCATQzzsFEQT3gM=
 			</data>
 		</dict>
-		<key>LatinOCRResources.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			q2KxfMT3wUka9kyia2uri6PvVeKynRNeqS4Vz24u68M=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/region_proposal_text_detector_tflite_gray_quantized.bincfg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Gji2RtEJwU3YrjDV8SqQNvYPnpI8kwEzeqJQd1nysJg=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/rpn_lstm_engine_tflite_latin.bincfg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EPDNQpLTZ7J3ggU9/BhgwGKbEwmAWLOsHW7KYoi7+wQ=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/rpn_text_detector_mobile_space_to_depth_quantized_v2.tflite</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KQajsAlTNRgTxJFzQeGXEH7SqqwtF2UIkHWNwZAnHe4=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/tflite_langid.tflite</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f5Mfb3wd0OxZGs53gN+RZFpFD6/INQXz/0XOXvfIRBs=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.bincfg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oFDru3MHCMhVaoh3k7h/zhLun/pRevxSBccdRiS9e8c=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.class_lst</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VRUPJ3nQeTbJ+/i+y7hWf+PqWta22UQkWClpWorpaPo=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.conv_model</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZKunGbTtHuWz1IhsWq8LGsBRv1h56bCOhh4OKeIKCKc=
-			</data>
-		</dict>
-		<key>LatinOCRResources.bundle/tflite_lstm_recognizer_latin_0.3.lstm_model</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DtYuT74PxcQJCuxHOxNuGI+ChZB2XAKDgjWNrds8y24=
-			</data>
-		</dict>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i2txcZNyMYXZOiHzxJMeH0XRm6pW4LEiF9g3ofh51Co=
+			Ld33Um1DuAH1DJPPyb9f+NBk1AruDQNebrRtmgcsQtU=
 			</data>
 		</dict>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RnzIUIvQSdCobMc4Y6N9mYaIxZFkLWpTzsj5G6Z69bU=
+			tb6YZX2HKDnCz4u/dRyeCAUVTqxRphonhy1Zjzo2STo=
 			</data>
 		</dict>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y+PRnBk7kAAHybEIMjFm+qWATWgwPoGX39Pvu6Xj4Lc=
+			CdkX84lLf6GB4YECAVIoRvzKTmEAvDWpb1fb/spXLYA=
 			</data>
 		</dict>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RnzIUIvQSdCobMc4Y6N9mYaIxZFkLWpTzsj5G6Z69bU=
+			tb6YZX2HKDnCz4u/dRyeCAUVTqxRphonhy1Zjzo2STo=
 			</data>
 		</dict>
 		<key>Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YsnudkASJwClXOBq8WAa95SNT63R+IGF41q0vI95CAI=
+			DmEJGAW77LuVlyS5HbxwBKI3pOC7eI1BTN2qYhPcjTo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -921,18 +694,25 @@
 			TJj2RjX8fMzdFPD/MPRGFrvXrzLT4ta3/pLxbGAy7BU=
 			</data>
 		</dict>
-		<key>nanopb_Privacy.bundle/Info.plist</key>
+		<key>ppocr_keys_v6_ascii.txt</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oK69B7aQ5DNehH3Z7/rNN41yyGj8bg7QpK29idT4+L4=
+			E0L5WdZWhW3oFwUMa9ic54bZ2x9CfYsjBloIke+jjw0=
 			</data>
 		</dict>
-		<key>nanopb_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<key>ppocr_v6_det.tflite</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cpujy9D0WMeM1h7fFzUO2v4ONMqG4xTsZMjLIszSG1Q=
+			sFV937hQnFuMQv8nubsLEdA1VWOkj3O21cUawOymz9g=
+			</data>
+		</dict>
+		<key>ppocr_v6_rec_96-CharSet_960-Width.tflite</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lHecDzuAlJiE391v1FuLj2BvHjfWZEf40xEXdHxMkxQ=
 			</data>
 		</dict>
 	</dict>
