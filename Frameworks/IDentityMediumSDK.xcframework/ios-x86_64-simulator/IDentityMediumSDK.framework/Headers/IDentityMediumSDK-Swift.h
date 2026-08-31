@@ -371,12 +371,6 @@ SWIFT_CLASS("_TtC17IDentityMediumSDK15LocationManager")
 - (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
 @end
 
-SWIFT_CLASS("_TtC17IDentityMediumSDK14PassportReader") SWIFT_AVAILABILITY(ios,introduced=15)
-@interface PassportReader : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 #endif
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

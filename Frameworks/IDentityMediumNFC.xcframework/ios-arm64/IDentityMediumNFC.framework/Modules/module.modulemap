@@ -1,0 +1,4 @@
+framework module IDentityMediumNFC {
+  header "IDentityMediumNFC-Swift.h"
+  requires objc
+}
