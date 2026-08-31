@@ -9,6 +9,7 @@ let package = Package(
     products: [
         .library(name: "IDentityMediumSDK", targets: ["IDentityMediumSDKTarget"]),
         .library(name: "IDentityMediumModels", targets: ["IDentityMediumModelsTarget"]),
+        .library(name: "IDentityMediumNFC", targets: ["IDentityMediumNFCTarget"]),
         .library(name: "SignatureCaptureMediumSDK", targets: ["SignatureCaptureMediumSDKTarget"]),
         .library(name: "VoiceCaptureMediumSDK", targets: ["VoiceCaptureMediumSDKTarget"]),
         .library(name: "FingerPrintCaptureMediumSDK", targets: ["FingerPrintCaptureMediumSDKTarget"])
@@ -28,6 +29,11 @@ let package = Package(
             name: "IDentityMediumModelsTarget",
             dependencies: ["IDentityMediumModels"],
             path: "Sources/IDentityMediumModels"
+        ),
+        .target(
+            name: "IDentityMediumNFCTarget",
+            dependencies: ["IDentityMediumNFC"],
+            path: "Sources/IDentityMediumNFC"
         ),
         .target(
             name: "SignatureCaptureMediumSDKTarget",
@@ -50,6 +56,7 @@ let package = Package(
         .binaryTarget(name: "IDCaptureMedium", path: "Frameworks/IDCaptureMedium.xcframework"),
         .binaryTarget(name: "SelfieCaptureMedium", path: "Frameworks/SelfieCaptureMedium.xcframework"),
         .binaryTarget(name: "IDentityMediumModels", path: "Frameworks/IDentityMediumModels.xcframework"),
+        .binaryTarget(name: "IDentityMediumNFC", path: "Frameworks/IDentityMediumNFC.xcframework"),
         .binaryTarget(name: "SignatureCaptureMedium", path: "Frameworks/SignatureCaptureMedium.xcframework"),
         .binaryTarget(name: "VoiceCaptureMedium", path: "Frameworks/VoiceCaptureMedium.xcframework"),
         .binaryTarget(name: "FingerPrintCaptureMedium", path: "Frameworks/FingerPrintCaptureMedium.xcframework")
