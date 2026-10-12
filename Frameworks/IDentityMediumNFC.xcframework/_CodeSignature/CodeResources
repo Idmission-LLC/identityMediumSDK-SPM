@@ -10,11 +10,11 @@
 		</data>
 		<key>ios-arm64/IDentityMediumNFC.framework/IDentityMediumNFC</key>
 		<data>
-		BXXmp2d3l6FekJBdm4PPjFIDRK0=
+		lXuUlRC8wjwbsj3h8w2bnwgzSKw=
 		</data>
 		<key>ios-arm64/IDentityMediumNFC.framework/Info.plist</key>
 		<data>
-		GZmnGK7gH7YrfgxcaIsyIu5CfUw=
+		5KKhZ+tJ7Yw5FTKl0j0vwS6Pmb0=
 		</data>
 		<key>ios-arm64/IDentityMediumNFC.framework/Modules/IDentityMediumNFC.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -38,19 +38,19 @@
 		</data>
 		<key>ios-arm64/IDentityMediumNFC.framework/_CodeSignature/CodeResources</key>
 		<data>
-		sX93BOoz3pih/TsqLVMOcM0BqQs=
+		3vL4vq4wzo0t2RN8QsJUncK1KwE=
 		</data>
 		<key>ios-arm64/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		hlfAvC2GS13lfMzq+SYyX3mRKyI=
+		zYU7yVId0tK8z3SlVkwKjjdu1/s=
 		</data>
 		<key>ios-arm64/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/DWARF/IDentityMediumNFC</key>
 		<data>
-		3+Hub7XMTwt/YlWzdevbtNROl3o=
+		PgSLvWv/uH/LX1vpymsrT1fpxlQ=
 		</data>
 		<key>ios-arm64/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/Relocations/aarch64/IDentityMediumNFC.yml</key>
 		<data>
-		eZyRgEQnCuPLFkZLPBJ4JrtmrX8=
+		u/lmrdcl5w2+3ygTFJGTJbTuhqI=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/Headers/IDentityMediumNFC-Swift.h</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/IDentityMediumNFC</key>
 		<data>
-		MGEH5OIHPoNGnl+XNqz/z01fH0M=
+		Dtjp49Akm/AJXo08+hpxAvi+hZE=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/Info.plist</key>
 		<data>
-		9A6H5U1kVjXLye5aTsuWAEY2D3g=
+		VQ/BkoDGJdt60n+q0kvjt6rJ8cE=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/Modules/IDentityMediumNFC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -86,19 +86,19 @@
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/_CodeSignature/CodeResources</key>
 		<data>
-		+lVmJvJK1b13jrc5AQ/Gx1GjnWk=
+		1zif4tWdkFSH3R3ggAhFv/VDQ6M=
 		</data>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		hlfAvC2GS13lfMzq+SYyX3mRKyI=
+		zYU7yVId0tK8z3SlVkwKjjdu1/s=
 		</data>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/DWARF/IDentityMediumNFC</key>
 		<data>
-		d+QsJpjtQ8noyuxDWs4cykxN6oM=
+		+xPPyxQwm8dDTlmgrt+BLW8y8ns=
 		</data>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/Relocations/x86_64/IDentityMediumNFC.yml</key>
 		<data>
-		vDtNeMKlaITf3LhAVKAEW9U8ECc=
+		ruSZfhx77e3rGlttQBJkCycMxks=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LZ+TQt7XKj12qAYBku5eaCn9k4ILHqaUDZL+VCfplrM=
+			toIyY3eCjDuMJ3nVBT5rRvWvzJTIZa0vTcnjPKoWeNQ=
 			</data>
 		</dict>
 		<key>ios-arm64/IDentityMediumNFC.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h9BpWdcR6CTO1/0T5GGPTPR7k+ULJ8lq90/6Ktaug5Q=
+			ttqpMCSAEhqeAeE86evVvYa3mRIJfBv5xlQ8ZlpFYL4=
 			</data>
 		</dict>
 		<key>ios-arm64/IDentityMediumNFC.framework/Modules/IDentityMediumNFC.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -163,28 +163,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eeNs0ar5C7enwudfAdI9pDARW1mC7o9/Z15rpkAvdzM=
+			rw/+RRZVs107Dehcutr+fb/nPbDtsGsp4wEpi62/IpY=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			L41QtykLGfFUppdfaHJKFVmDPDvf7LyotuAzRuwPHK4=
+			KTmnzOSGcXhc5JWqKgkRDWDwogzcpMvDI+ng+rJCAcg=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/DWARF/IDentityMediumNFC</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lvAiMzaj1AqQymFnAZjIGv3JmDS70bU73s9rFIuCOZY=
+			OlHG2M41TcKM8I+WQqo4QU2FQhyg8lowFSSKUFABV+Q=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/Relocations/aarch64/IDentityMediumNFC.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H1wIpvpOcAj0l7LuMq8IpUffcRiLfgS3DoW29ZlKElE=
+			vI8gWJd6/YzdugNKEIwd7maPCJLqxW8wFDPyS9K7XU8=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/Headers/IDentityMediumNFC-Swift.h</key>
@@ -198,14 +198,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sKMmmq14OWaGrUuaL/NKkJd6Md+k+uo1hpXff4TexJM=
+			2Sd+pvOXzjnMJ7J+8mbePGFJ59fCAslPAoHHE7FbPQM=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nkYZaP3K5O17BmVA5P/VS7p0RHWR8m1yzPDNjE0w4ms=
+			UgXcg4sUmxdckFzSAgTdUcXo5SWw1f3qK9WUDtjiYdQ=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumNFC.framework/Modules/IDentityMediumNFC.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -247,28 +247,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cYECJ1AnLPxj6JDlhNmUOSD5X4NxoolzNE8hqBxk1T8=
+			7NZ/4B1ARd0SctlOzpYVAUrtSUUzz1c7vWcsMQTekIw=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			L41QtykLGfFUppdfaHJKFVmDPDvf7LyotuAzRuwPHK4=
+			KTmnzOSGcXhc5JWqKgkRDWDwogzcpMvDI+ng+rJCAcg=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/DWARF/IDentityMediumNFC</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kR2kDKVcIkQvEIeEwLfJ5+A2FRFUZ70WN8CncguqN1M=
+			1mFhg3T0sQ4Kdnayi37ICWIRpGDXBp8TLSoiMvjv9sk=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumNFC.framework.dSYM/Contents/Resources/Relocations/x86_64/IDentityMediumNFC.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uhO6GW5lClxWHUPz/Z0em2A7DczsfRgkveIIv0Q00C0=
+			lggzbbYSX2nMQtd6jRj15HpKQQCNMXlMjcKr0RikZOI=
 			</data>
 		</dict>
 	</dict>

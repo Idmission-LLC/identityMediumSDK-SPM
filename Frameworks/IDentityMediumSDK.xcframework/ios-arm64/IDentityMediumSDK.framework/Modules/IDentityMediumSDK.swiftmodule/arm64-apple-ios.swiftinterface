@@ -82,6 +82,9 @@ public struct DebugData {
   public var fingerRect: CoreFoundation.CGRect?
   public var glareScore: Swift.Float?
   public var fingerScore: Swift.Float?
+  public var detectedDocumentType: Swift.String?
+  public var documentScore: Swift.Float?
+  public var documentBackScore: Swift.Float?
   public var mrzRect: CoreFoundation.CGRect?
   public var barcodeRect: CoreFoundation.CGRect?
 }
@@ -120,6 +123,8 @@ public struct DetectedData {
   public var nfc: IDentityMediumSDK.NFCPassportModel?
   public var nfcFaceImageMatched: Swift.Bool?
   public var nfcFaceImageMatchDistance: Swift.Float?
+  public var nfcReadFailed: Swift.Bool
+  public var nfcReadCanceled: Swift.Bool
   public var ocrStrings: [Swift.String]?
   public var idType: Swift.String?
   public var country: Swift.String?
@@ -169,7 +174,17 @@ public enum CaptureBack : Swift.Int {
   }
 }
 extension IDentityMediumSDK.NFCPassportModel {
-  public func dictionary(compressionQuality: CoreFoundation.CGFloat) -> [Swift.String : Any]
+  public func dictionary() -> [Swift.String : Any]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var nfcSelfieBase64: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var nfcSignatureBase64: Swift.String? {
+    get
+  }
+  #endif
 }
 public struct CustomerVerifyDataResponse : Swift.Codable {
   public var extractedPersonalData: IDentityMediumSDK.PersonalCustomerVerifyResponseData?
@@ -325,6 +340,7 @@ public struct GenericDataRequest : Swift.Encodable {
 }
 public struct GenericCustomerData : Swift.Encodable {
   public var selfie: Swift.String?
+  public var nfcSelfie: Swift.String?
   public var idImageFront: Swift.String?
   public var idImageBack: Swift.String?
   public var secondaryIdImageFront: Swift.String?
@@ -339,7 +355,7 @@ public struct GenericCustomerData : Swift.Encodable {
   public var metadata: IDentityMediumSDK.Metadata?
   public var ocrMetadata: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfie: Swift.String? = nil, idImageFront: Swift.String? = nil, idImageBack: Swift.String? = nil, secondaryIdImageFront: Swift.String? = nil, secondaryIdImageBack: Swift.String? = nil, videoIdImageFront: Swift.String? = nil, videoIdImageBack: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil, metadata: IDentityMediumSDK.Metadata? = nil, ocrMetadata: Swift.String? = nil)
+  public init(selfie: Swift.String? = nil, nfcSelfie: Swift.String? = nil, idImageFront: Swift.String? = nil, idImageBack: Swift.String? = nil, secondaryIdImageFront: Swift.String? = nil, secondaryIdImageBack: Swift.String? = nil, videoIdImageFront: Swift.String? = nil, videoIdImageBack: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil, metadata: IDentityMediumSDK.Metadata? = nil, ocrMetadata: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -399,6 +415,8 @@ public enum EventName : Swift.String, Swift.Codable {
   case modelDownloadIdFocusEvent
   case modelDownloadClassificationEvent
   case modelDownloadFingerPrintEvent
+  case modelDownloadPaddleOCRDetectionEvent
+  case modelDownloadPaddleOCRRecognitionEvent
   case selfieCaptureEvent
   case idCaptureEvent
   case idToSelfieMatchingEvent
@@ -514,8 +532,9 @@ public struct CustomerEnrollDataResponse : Swift.Codable {
 public struct SignatureDataRequest : Swift.Codable {
   public var signatureImage: Swift.String?
   public var signatureVideo: Swift.String?
+  public var nfcSignature: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(signatureImage: Swift.String? = nil, signatureVideo: Swift.String? = nil)
+  public init(signatureImage: Swift.String? = nil, signatureVideo: Swift.String? = nil, nfcSignature: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -802,6 +821,8 @@ extension IDentityMediumSDK.IDCapture {
     public var previewScreenDoneButton: IDentityMediumSDK.IDCapture.ButtonBorderStyle?
     public var retryScreenRetryButton: IDentityMediumSDK.IDCapture.ButtonBorderStyle?
     public var retryScreenCancelButton: IDentityMediumSDK.IDCapture.ButtonBorderStyle?
+    public var nfcErrorScreenRetryButton: IDentityMediumSDK.IDCapture.ButtonBorderStyle?
+    public var nfcErrorScreenSkipButton: IDentityMediumSDK.IDCapture.ButtonBorderStyle?
   }
 }
 extension IDentityMediumSDK.DocumentCapture {
@@ -844,11 +865,12 @@ extension Swift.Dictionary {
 }
 public struct BiometricVerifyRequestData : Swift.Encodable {
   public var selfie: Swift.String
+  public var nfcSelfie: Swift.String?
   public var fingerPrintData: IDentityMediumSDK.FingerPrintData?
   public var voiceData: Swift.String?
   public var videoData: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfie: Swift.String, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil)
+  public init(selfie: Swift.String, nfcSelfie: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -1509,6 +1531,7 @@ public class IDCapture {
   public func updateOverlayFrame(_ frame: CoreFoundation.CGRect)
   public func captureAnyway()
   public func typeMismatch()
+  public func discardCapture()
   public func retry()
   public func done()
   @objc deinit
@@ -2167,21 +2190,23 @@ public struct CustomerEnrollBiometricDataRequest : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct BiometricDataValidateId : Swift.Encodable {
+  public var nfcSelfie: Swift.String?
   public var fingerPrintData: IDentityMediumSDK.FingerPrintData?
   public var voiceData: Swift.String?
   public var videoData: Swift.String?
   public var voiceStartTime: Swift.Int?
   public var expectedAudioText: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil)
+  public init(nfcSelfie: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct BiometricLiveCheckData : Swift.Encodable {
   public var selfie: Swift.String
+  public var nfcSelfie: Swift.String?
   public var fingerPrintData: IDentityMediumSDK.FingerPrintData?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfie: Swift.String, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil)
+  public init(selfie: Swift.String, nfcSelfie: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -2656,13 +2681,14 @@ public struct QKMRZResult {
 }
 public struct BiometricEnrollData : Swift.Encodable {
   public var selfie: Swift.String
+  public var nfcSelfie: Swift.String?
   public var fingerPrintData: IDentityMediumSDK.FingerPrintData?
   public var voiceData: Swift.String?
   public var videoData: Swift.String?
   public var voiceStartTime: Swift.Int?
   public var expectedAudioText: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfie: Swift.String, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil)
+  public init(selfie: Swift.String, nfcSelfie: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -3390,11 +3416,12 @@ public struct KeyInfo : Swift.Codable {
 }
 public struct BiometricIdentifyData : Swift.Encodable {
   public var selfie: Swift.String
+  public var nfcSelfie: Swift.String?
   public var fingerPrintData: IDentityMediumSDK.FingerPrintData?
   public var voiceData: Swift.String?
   public var videoData: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfie: Swift.String, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil)
+  public init(selfie: Swift.String, nfcSelfie: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -3538,6 +3565,13 @@ extension IDentityMediumSDK.IDCapture {
     public var retryScreenRetryButtonBackgroundColor: UIKit.UIColor?
     public var retryScreenCancelButtonTextColor: UIKit.UIColor?
     public var retryScreenCancelButtonBackgroundColor: UIKit.UIColor?
+    public var nfcErrorScreenBackgroundColor: UIKit.UIColor?
+    public var nfcErrorScreenErrorTextColor: UIKit.UIColor?
+    public var nfcErrorScreenImageTintColor: UIKit.UIColor?
+    public var nfcErrorScreenRetryButtonTextColor: UIKit.UIColor?
+    public var nfcErrorScreenRetryButtonBackgroundColor: UIKit.UIColor?
+    public var nfcErrorScreenSkipButtonTextColor: UIKit.UIColor?
+    public var nfcErrorScreenSkipButtonBackgroundColor: UIKit.UIColor?
   }
 }
 public struct PersonalCustomerValidateIdResponseData : Swift.Codable {
@@ -3715,7 +3749,6 @@ extension IDentityMediumSDK.IDCapture {
     public var moveCloser: Swift.String
     public var moveAway: Swift.String
     public var alignRectangle: Swift.String
-    public var positionIdInFrame: Swift.String
     public var backImageDetected: Swift.String
     public var frontImageDetected: Swift.String
     public var idCaptureWarningMessage: Swift.String
@@ -3741,10 +3774,13 @@ extension IDentityMediumSDK.IDCapture {
     public var retryScreenText: Swift.String
     public var retryButtonText: Swift.String
     public var cancelButtonText: Swift.String
-    public var passportNFCPrompt: Swift.String
-    public var passportReadingNFCDataText: Swift.String
-    public var passportReadingNFCDataSuccessText: Swift.String
+    public var nfcScreenScanInstructions: Swift.String
+    public var nfcScreenLoadingText: Swift.String
+    public var nfcScreenSuccessTitle: Swift.String
     public var faceDoesNotMatch: Swift.String
+    public var nfcErrorScreenErrorText: Swift.String
+    public var nfcErrorScreenRetryButtonText: Swift.String
+    public var nfcErrorScreenSkipButtonText: Swift.String
     public mutating func reset()
   }
 }
@@ -4010,13 +4046,14 @@ extension QuartzCore.CALayer {
 }
 public struct BiometricValidateIdFaceMatchData : Swift.Encodable {
   public var selfie: Swift.String
+  public var nfcSelfie: Swift.String?
   public var fingerPrintData: IDentityMediumSDK.FingerPrintData?
   public var voiceData: Swift.String?
   public var videoData: Swift.String?
   public var voiceStartTime: Swift.Int?
   public var expectedAudioText: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfie: Swift.String, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil)
+  public init(selfie: Swift.String, nfcSelfie: Swift.String? = nil, fingerPrintData: IDentityMediumSDK.FingerPrintData? = nil, voiceData: Swift.String? = nil, videoData: Swift.String? = nil, voiceStartTime: Swift.Int? = nil, expectedAudioText: Swift.String? = nil)
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -4039,6 +4076,7 @@ extension IDentityMediumSDK.IDCapture {
     public var backSilhouetteImage: UIKit.UIImage?
     public var bottomInfoImage: UIKit.UIImage?
     public var retryScreenImage: UIKit.UIImage?
+    public var nfcErrorScreenImage: UIKit.UIImage?
   }
 }
 extension UIKit.UIImage {
@@ -4289,6 +4327,9 @@ extension IDentityMediumSDK.IDCapture {
     public var retryScreenLabelFont: UIKit.UIFont?
     public var retryScreenRetryButtonFont: UIKit.UIFont?
     public var retryScreenCancelButtonFont: UIKit.UIFont?
+    public var nfcErrorScreenErrorTextFont: UIKit.UIFont?
+    public var nfcErrorScreenRetryButtonTextFont: UIKit.UIFont?
+    public var nfcErrorScreenSkipButtonTextFont: UIKit.UIFont?
   }
 }
 public struct PersonalCustomerVerifyData : Swift.Encodable {
@@ -4784,6 +4825,8 @@ public enum InitializationStage : Swift.String {
   case docDetectionTrainingModelLabel
   case fingerprintDetectionTrainingModelLabel
   case focusTrainingModelLabel
+  case paddleOCRDetectionTrainingModelLabel
+  case paddleOCRRecognitionTrainingModelLabel
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -4844,6 +4887,12 @@ extension IDentityMediumSDK.IDentitySDK {
     get
   }
   public static var focusModelName: Swift.String {
+    get
+  }
+  public static var paddleOCRDetectionModelName: Swift.String {
+    get
+  }
+  public static var paddleOCRRecognitionModelName: Swift.String {
     get
   }
   public static var areModelsAlreadyDownloadedAndValid: Swift.Bool {
@@ -5242,6 +5291,12 @@ public class NFCPassportModel {
   public var faceImageInfo: IDentityMediumSDK.FaceImageInfo? {
     get
   }
+  public var faceImageData: Foundation.Data? {
+    get
+  }
+  public var signatureImageData: Foundation.Data? {
+    get
+  }
   public var LDSVersion: Swift.String {
     get
   }
@@ -5304,7 +5359,7 @@ public class NFCPassportModel {
   }
   public init()
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(documentType: Swift.String, documentSubType: Swift.String, documentNumber: Swift.String, issuingAuthority: Swift.String, documentExpiryDate: Swift.String, dateOfBirth: Swift.String, gender: Swift.String, nationality: Swift.String, passportMRZ: Swift.String, lastName: Swift.String, firstName: Swift.String, fullName: Swift.String, placeOfBirth: Swift.String?, residenceAddress: Swift.String?, phoneNumber: Swift.String?, profession: Swift.String?, personalNumber: Swift.String?, custodyInfo: Swift.String?, dateOfIssue: Swift.String?, personalNumberArray: [Swift.String]?, tdNumbers: Swift.String?, passportImage: UIKit.UIImage?, signatureImage: UIKit.UIImage?, faceImageInfo: IDentityMediumSDK.FaceImageInfo?, LDSVersion: Swift.String, dataGroupsPresent: [Swift.String], dataGroupsAvailable: [IDentityMediumSDK.DataGroupId], dataGroupHashes: [IDentityMediumSDK.DataGroupId : IDentityMediumSDK.DataGroupHash], securityInfos: [IDentityMediumSDK.NFCSecurityInfo], BACStatus: IDentityMediumSDK.PassportAuthenticationStatus, PACEStatus: IDentityMediumSDK.PassportAuthenticationStatus, chipAuthenticationStatus: IDentityMediumSDK.PassportAuthenticationStatus, isPACESupported: Swift.Bool, isChipAuthenticationSupported: Swift.Bool, activeAuthenticationSupported: Swift.Bool, passportCorrectlySigned: Swift.Bool, documentSigningCertificateVerified: Swift.Bool, passportDataNotTampered: Swift.Bool, activeAuthenticationPassed: Swift.Bool, activeAuthenticationChallenge: [Swift.UInt8], activeAuthenticationSignature: [Swift.UInt8], verificationErrors: [any Swift.Error], documentSigningCertificateDetails: [IDentityMediumSDK.CertificateItem : Swift.String]?, countrySigningCertificateDetails: [IDentityMediumSDK.CertificateItem : Swift.String]?)
+  public init(documentType: Swift.String, documentSubType: Swift.String, documentNumber: Swift.String, issuingAuthority: Swift.String, documentExpiryDate: Swift.String, dateOfBirth: Swift.String, gender: Swift.String, nationality: Swift.String, passportMRZ: Swift.String, lastName: Swift.String, firstName: Swift.String, fullName: Swift.String, placeOfBirth: Swift.String?, residenceAddress: Swift.String?, phoneNumber: Swift.String?, profession: Swift.String?, personalNumber: Swift.String?, custodyInfo: Swift.String?, dateOfIssue: Swift.String?, personalNumberArray: [Swift.String]?, tdNumbers: Swift.String?, passportImage: UIKit.UIImage?, signatureImage: UIKit.UIImage?, faceImageInfo: IDentityMediumSDK.FaceImageInfo?, faceImageData: Foundation.Data? = nil, signatureImageData: Foundation.Data? = nil, LDSVersion: Swift.String, dataGroupsPresent: [Swift.String], dataGroupsAvailable: [IDentityMediumSDK.DataGroupId], dataGroupHashes: [IDentityMediumSDK.DataGroupId : IDentityMediumSDK.DataGroupHash], securityInfos: [IDentityMediumSDK.NFCSecurityInfo], BACStatus: IDentityMediumSDK.PassportAuthenticationStatus, PACEStatus: IDentityMediumSDK.PassportAuthenticationStatus, chipAuthenticationStatus: IDentityMediumSDK.PassportAuthenticationStatus, isPACESupported: Swift.Bool, isChipAuthenticationSupported: Swift.Bool, activeAuthenticationSupported: Swift.Bool, passportCorrectlySigned: Swift.Bool, documentSigningCertificateVerified: Swift.Bool, passportDataNotTampered: Swift.Bool, activeAuthenticationPassed: Swift.Bool, activeAuthenticationChallenge: [Swift.UInt8], activeAuthenticationSignature: [Swift.UInt8], verificationErrors: [any Swift.Error], documentSigningCertificateDetails: [IDentityMediumSDK.CertificateItem : Swift.String]?, countrySigningCertificateDetails: [IDentityMediumSDK.CertificateItem : Swift.String]?)
   #endif
   @objc deinit
 }

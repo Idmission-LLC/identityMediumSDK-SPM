@@ -1,7 +1,6 @@
-[README.md](https://github.com/user-attachments/files/31652932/README.md)
 # IDentity Medium SDK for iOS
 
-[![Platform](https://img.shields.io/badge/platform-iOS%2015%2B-lightgrey.svg)](https://developer.apple.com)
+[![Platform](https://img.shields.io/badge/platform-iOS%2015.6%2B-lightgrey.svg)](https://developer.apple.com)
 [![Swift Tools](https://img.shields.io/badge/swift--tools-5.9-orange.svg)](https://swift.org)
 [![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://swift.org/package-manager)
 [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
@@ -32,7 +31,6 @@ This repository distributes the SDK as a **Swift Package** of pre-built, code-si
 - [Features](#features)
 - [ePassport NFC chip reading](#epassport-nfc-chip-reading)
 - [Localization](#localization)
-- [Security controls](#security-controls)
 - [Diagnostics](#diagnostics)
 - [Framework sizes](#framework-sizes)
 - [Versioning and releases](#versioning-and-releases)
@@ -69,8 +67,8 @@ contact <sales@idmission.com>.
 
 | | |
 |:---|:---|
-| **Minimum deployment target** | iOS 15.0 |
-| **Xcode** | 15.0 or later |
+| **Minimum deployment target** | iOS 15.6 |
+| **Xcode** | 26.0 or later |
 | **Swift tools version** | 5.9 |
 | **Device architecture** | `arm64` |
 | **Simulator architecture** | `x86_64` only — see [Apple Silicon note](#apple-silicon-simulators) |
@@ -138,10 +136,29 @@ publishes newer versions.
    https://github.com/Idmission-LLC/identityMediumSDK-SPM
    ```
 
-3. Set **Dependency Rule** to **Up to Next Major Version** starting at `11.1.17`.
+3. Choose the **Dependency Rule** for the release you want to install:
+
+   | To install | Dependency Rule | Version |
+   |:---|:---|:---|
+   | **Current production release** (recommended) | Up to Next Major Version | `11.1.19` |
+   | **Pre-release** (release candidate, for testing) | Exact Version | The pre-release tag, e.g. `11.1.19-rc.1` |
+
 4. Click **Add Package**, then tick the products you need. `IDentityMediumSDK` is mandatory.
 
+> [!NOTE]
+> `11.1.19` is the first production release of the Medium SDK distributed through Swift Package
+> Manager. Earlier Medium SDK versions are not available from this package.
+
+> [!NOTE]
+> Pre-release tags have the form `MAJOR.MINOR.PATCH-rc.N` — for example `11.1.19-rc.1`, `11.1.19-rc.2`.
+> Swift Package Manager never resolves a pre-release from a version range, so **Up to Next Major Version**
+> keeps you on production releases. To try a pre-release, pin its exact tag, and switch back to the
+> production rule once the final version (for example `11.1.19`) is published. Do not ship pre-releases in
+> production apps.
+
 ### Package.swift
+
+To install the **current production release**:
 
 ```swift
 // swift-tools-version: 5.9
@@ -149,11 +166,11 @@ import PackageDescription
 
 let package = Package(
     name: "YourApp",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS("15.6")],
     dependencies: [
         .package(
             url: "https://github.com/Idmission-LLC/identityMediumSDK-SPM",
-            from: "11.1.17"
+            from: "11.1.19"        // 11.1.19 up to, but not including, 12.0.0
         )
     ],
     targets: [
@@ -171,6 +188,17 @@ let package = Package(
         )
     ]
 )
+```
+
+To install a **pre-release**, pin the dependency to its exact tag instead:
+
+```swift
+dependencies: [
+    .package(
+        url: "https://github.com/Idmission-LLC/identityMediumSDK-SPM",
+        exact: "11.1.19-rc.1"
+    )
+],
 ```
 
 ### Repository access
@@ -336,7 +364,9 @@ final class SplashViewController: UIViewController, InitializationDelegate {
             .idCaptureTrainingModelLabel,
             .docDetectionTrainingModelLabel,
             .fingerprintDetectionTrainingModelLabel,
-            .focusTrainingModelLabel
+            .focusTrainingModelLabel,
+            .paddleOCRDetectionTrainingModelLabel,
+            .paddleOCRRecognitionTrainingModelLabel
         ]
 
         let ready =
@@ -355,14 +385,15 @@ final class SplashViewController: UIViewController, InitializationDelegate {
 }
 ```
 
-**Stages reported by the Medium SDK (13):** `login`, `getXsltData`, `searchCompanyTemplateDetails`,
+**Stages reported by the Medium SDK (15):** `login`, `getXsltData`, `searchCompanyTemplateDetails`,
 `faceFullRangeSparseTrainingModelLabel`, `faceLandmarksDetectorTrainingModelLabel`,
 `faceBlendshapesDetectorTrainingModelLabel`, `passiveFaceTrainingModelLabel`, `faceMaskTrainingModelLabel`,
 `focusFaceTrainingModelLabel`, `idCaptureTrainingModelLabel`, `docDetectionTrainingModelLabel`,
-`fingerprintDetectionTrainingModelLabel`, `focusTrainingModelLabel`.
+`fingerprintDetectionTrainingModelLabel`, `focusTrainingModelLabel`,
+`paddleOCRDetectionTrainingModelLabel`, `paddleOCRRecognitionTrainingModelLabel`.
 
-**Never reported by Medium:** `classifierTrainingModelLabel` — document classification runs on the server for
-this flavour.
+The two Paddle OCR stages are specific to the Medium SDK: they deliver the on-device text detection and
+text recognition models.
 
 **States:** `ok`, `paused`, `downloading`, `downloaded`, `downloadingFromS3`, `downloadedFromS3`, `error`.
 
@@ -405,7 +436,8 @@ IDentitySDK.liveFaceCheck(
 ) { result in
     switch result {
     case .success(let capture):
-        // capture.selfie: Selfie, capture.isFakeFace: Bool\n        capture.finalSubmit { submission in
+        // capture.selfie: Selfie, capture.isFakeFace: Bool
+        capture.finalSubmit { submission in
             switch submission {
             case .success(let response):
                 print(response)
@@ -534,7 +566,8 @@ IDentitySDK.idValidationAndMatchFace(
 ) { result in
     switch result {
     case .success(let capture):
-        // capture.selfie, capture.front, capture.back\n        capture.finalSubmit { submission in
+        // capture.selfie, capture.front, capture.back
+        capture.finalSubmit { submission in
             switch submission {
             case .success(let response):
                 print(response)
@@ -1047,36 +1080,6 @@ Language.current = .es
 
 ---
 
-## Security controls
-
-The SDK detects screenshots and screen recording, and scans loaded images for hooking and instrumentation
-frameworks. Both protections are enabled by default once `initializeSDK` completes.
-
-```swift
-// Screenshot and screen-recording monitoring. Enabled by default after initializeSDK.
-IDentitySDK.setScreenSecurityEnabled(true)
-
-// The automatic blur overlay applied when screen recording is detected. Enabled by default.
-IDentitySDK.isScreenRecordingEnabled(true)
-
-// Names of your own security frameworks that would otherwise be flagged as
-// instrumentation. Set this BEFORE calling initializeSDK.
-IDentitySDK.allowedSecurityFrameworks = ["MyJailbreakDetector"]
-```
-
-> [!NOTE]
-> Despite the `is` prefix, `isScreenRecordingEnabled(_:)` is a setter, not a query — it takes a `Bool` and
-> returns nothing.
-
-If your app bundles a legitimate anti-tamper or jailbreak-detection framework, add its name to
-`allowedSecurityFrameworks` **before** initializing. The SDK's hook detection would otherwise flag it as a
-false positive.
-
-`setDevelopmentRelaxationSecret(_:)` relaxes selected runtime integrity checks for debugging. **Never ship an
-app that calls it.** Ask IDmission support before using it.
-
----
-
 ## Diagnostics
 
 ```swift
@@ -1116,8 +1119,11 @@ Required products total **27.9 MB**; every optional product adds to that. Omit `
 ## Versioning and releases
 
 Releases are published as Git tags of the form `MAJOR.MINOR.PATCH` — for example `11.1.17`. Pin with
-`from: "11.1.17"` to accept compatible updates, or pin `.exact("11.1.17")` if your release process requires a
+`from: "11.1.17"` to accept compatible updates, or pin `exact: "11.1.17"` if your release process requires a
 frozen dependency graph.
+
+Pre-releases are published as `MAJOR.MINOR.PATCH-rc.N` tags — for example `11.1.19-rc.1` — ahead of the
+matching production release. They are only resolved when pinned exactly; see [Installation](#installation).
 
 The three IDmission SPM packages are versioned in lockstep. If you integrate more than one, use the same
 version across all of them.

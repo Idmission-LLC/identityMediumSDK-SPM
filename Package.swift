@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "IDentityMediumSDK",
     platforms: [
-        .iOS(.v15)
+        .iOS("15.6")
     ],
     products: [
         .library(name: "IDentityMediumSDK", targets: ["IDentityMediumSDKTarget"]),
