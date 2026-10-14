@@ -214,11 +214,11 @@
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/IDentityMediumSDK</key>
 		<data>
-		Z1LD5iCPF9dqdtBJixCtbfbvrhQ=
+		FMee8kAkkWgs7/4I9ql12AyW+SY=
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/Info.plist</key>
 		<data>
-		Dm6tVFGQtpuo3wk1Ix3vFBReXLA=
+		vdqv4ZxcJbmF7jsKiA9UxQBmjYI=
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/LICENSE</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/Modules/IDentityMediumSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		mugwuJf74TIN8hh7ye8ygQ2TTOQ=
+		5TqYhyCRsYlUppU/V5zgw3Qx/7Q=
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/Modules/IDentityMediumSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Dyv1375h7OoHQ0Ce1VlqD9KEn10=
+		ABC8iqLOBC+XohHWk3aWZqiCeko=
 		</data>
 		<key>ios-arm64/IDentityMediumSDK.framework/ppocr_keys_v6_ascii.txt</key>
 		<data>
@@ -262,15 +262,15 @@
 		</data>
 		<key>ios-arm64/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		1EVymov9orx0V5l5qSn4dcn1xNk=
+		Nzan5n6J6S1r7lmILQFNROs0XBU=
 		</data>
 		<key>ios-arm64/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/DWARF/IDentityMediumSDK</key>
 		<data>
-		JACfim/AZjQ9ZBf6u4RisB0YQaA=
+		H7iNvhOQ00cZuxODRAzSOzKgl7g=
 		</data>
 		<key>ios-arm64/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/IDentityMediumSDK.yml</key>
 		<data>
-		Et0AhIxfd5LkeiwMpuXGNlfHnR8=
+		Bw3pZiNXZpngeAZqIyYAA+bMpRM=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Assets.car</key>
 		<data>
@@ -482,11 +482,11 @@
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/IDentityMediumSDK</key>
 		<data>
-		ID0CDC0NOl+wlj2OEm0O/9UTKPA=
+		rTOucaj+v5MvjXY5C7YYjWjYTno=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Info.plist</key>
 		<data>
-		FuO7dkdWiaFfTPkb0Ad2+QYYLiY=
+		LCa5uWPIvmcpA3jRCkbHJGLLd9g=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/LICENSE</key>
 		<data>
@@ -494,7 +494,7 @@
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		gbr1Cuv45fw08PCfzcpnjRxM70w=
+		M7K4oG5aMj+BcFQx7HbNAeYk5fk=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -522,7 +522,7 @@
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		+BvZkOaVhvnAeCsrDhkm1d0Lcvk=
+		uNnw2hN8YgUGNOLkPzDCc9YEt9U=
 		</data>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/ppocr_keys_v6_ascii.txt</key>
 		<data>
@@ -530,15 +530,15 @@
 		</data>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		1EVymov9orx0V5l5qSn4dcn1xNk=
+		Nzan5n6J6S1r7lmILQFNROs0XBU=
 		</data>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/DWARF/IDentityMediumSDK</key>
 		<data>
-		Y5nCZcsT5VkRGff84JDvo6cxXnY=
+		f9s861t8lwhiIXfV5Nfx9PjFVrM=
 		</data>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/Relocations/x86_64/IDentityMediumSDK.yml</key>
 		<data>
-		AADcAnNiBS4uQzHCutYESKPW5IA=
+		cGvQ9gXaE2+CgCCf2kphRK1NzXY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -911,14 +911,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XSgq/Ye/jo+7/SzdffnLu7fZe/E/YJT32yPtH0c2mm8=
+			VH5japbXz7J5hBuK8+VS4cydMpws58SaIQUDJc9eAWQ=
 			</data>
 		</dict>
 		<key>ios-arm64/IDentityMediumSDK.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N+y1VLK1w3dT2BDZm6dadqLmf8jq0pEH1zjL+jKbTpU=
+			seblcw1qxH/8RHnM6+lzEQFFB28m/hX4p0+XZC4mn9g=
 			</data>
 		</dict>
 		<key>ios-arm64/IDentityMediumSDK.framework/LICENSE</key>
@@ -932,7 +932,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QKq9Oxg5CeNnx2RMobalzQbdHR/xEmW5086ppDNXLmM=
+			3HKsl+0uKiE02JI7KBcfthZXBfZWQRRC1R62cL6cbdo=
 			</data>
 		</dict>
 		<key>ios-arm64/IDentityMediumSDK.framework/Modules/IDentityMediumSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -981,7 +981,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1S5qDm6Ea8ysP6YltDKBEw8orK/a/oruu1MEgKPdxDY=
+			LhRlCRpHCK2w3X9z3E7ptBgJzHqZRiaUoxxDuEQHrgY=
 			</data>
 		</dict>
 		<key>ios-arm64/IDentityMediumSDK.framework/ppocr_keys_v6_ascii.txt</key>
@@ -995,21 +995,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			18Febksk5rnE9+t6Szod6iORSkliDbzP/5zffKSKGO8=
+			/4NoO9e7J2ad4e69IIP30N6++eyGKPc3gKzfTpkDcKw=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/DWARF/IDentityMediumSDK</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JTzetIx1Be3zjI/d0ynDJ+NkImGcJXsB0ZhriBzvxB8=
+			zr845fmaaDKJAnIckrsTm7ErY5PfXpN6uF1+wlCpUMg=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/IDentityMediumSDK.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JLsmqH+r4EJI3oiwnvqTPFWnV5GzSkWvFcOLNcERdgk=
+			Ua1IzeRCnVTOXkqI00YS2OcdfZqip9cX/MhKfUgqGG4=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Assets.car</key>
@@ -1380,14 +1380,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2R4eTnZpRGC9MMHCMCZ+OwJPwxEJxfL61z9m0Yh2Qsk=
+			Wv8PoEduIJZxwtXWoIoWqzYUB4p/vQe2yc0z8nlVFKM=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dXLG8lj7zscekMCbFymEp3pozXmo1ZiiqiWbJCg5Pj8=
+			AdImC+rRsU80ZZfSMdbJ0zSZmLL6zlV9FaDvPVaQpD8=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/LICENSE</key>
@@ -1401,7 +1401,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wRRrOUYHpmvUjARRjSNlUS55quGuKk93VJMn6c3rW/Q=
+			yNmBwhrQv384WizI4UeN++8ceM2tTBO+3RSeBnl7vKA=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/Modules/IDentityMediumSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1450,7 +1450,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p+BDNPfmrm31r/HIOpMHFED02mnvbRkpeFQdADZ3VKA=
+			5zkcvbdvDZaW9bHzWq65880CiXWHhN/VTO6D+XH0L4s=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/IDentityMediumSDK.framework/ppocr_keys_v6_ascii.txt</key>
@@ -1464,21 +1464,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			18Febksk5rnE9+t6Szod6iORSkliDbzP/5zffKSKGO8=
+			/4NoO9e7J2ad4e69IIP30N6++eyGKPc3gKzfTpkDcKw=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/DWARF/IDentityMediumSDK</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J2rXn14oesfurKa2UtkpGU6CvjX8bz/KE4UtmV/2MeY=
+			FzKLUxfemRPpI9uIo2haaA0LS8do6mffkkXCtnGtDO0=
 			</data>
 		</dict>
 		<key>ios-x86_64-simulator/dSYMs/IDentityMediumSDK.framework.dSYM/Contents/Resources/Relocations/x86_64/IDentityMediumSDK.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r4kxtopOyUvVfI5YnydB9hBP6f5fDYHF4ZI57enIfsw=
+			xaYUCMwojRC3C0RzrLJT7MTCPYkrLxBiM7Lo3U4TMBk=
 			</data>
 		</dict>
 	</dict>
