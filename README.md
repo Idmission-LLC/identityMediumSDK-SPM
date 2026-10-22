@@ -117,7 +117,7 @@ The SDK needs a set of TensorFlow Lite models to run on-device inference. You ch
 
 - **Omit the product** (default): models are downloaded from IDmission on first initialization. Smallest app
   binary, but the first launch needs network access and takes longer.
-- **Include the product**: the models ship inside your app (about 21 MB uncompressed). First launch is fast
+- **Include the product**: the models ship inside your app (about 25 MB uncompressed). First launch is fast
   and works without model downloads.
 
 Either way, call `initializeSDK` with `isUpdateModelsData: true` so the SDK can refresh models when IDmission
@@ -141,7 +141,7 @@ publishes newer versions.
    | To install | Dependency Rule | Version |
    |:---|:---|:---|
    | **Current production release** (recommended) | Up to Next Major Version | `11.1.19` |
-   | **Pre-release** (release candidate, for testing) | Exact Version | The pre-release tag, e.g. `11.1.19-rc.1` |
+   | **Pre-release** (release candidate, for testing) | Exact Version | The pre-release tag, e.g. `X.Y.Z-rc.n` |
 
 4. Click **Add Package**, then tick the products you need. `IDentityMediumSDK` is mandatory.
 
@@ -150,10 +150,10 @@ publishes newer versions.
 > Manager. Earlier Medium SDK versions are not available from this package.
 
 > [!NOTE]
-> Pre-release tags have the form `MAJOR.MINOR.PATCH-rc.N` — for example `11.1.19-rc.1`, `11.1.19-rc.2`.
+> Pre-release tags have the form `X.Y.Z-rc.n`, where `n` counts up from 1 for each release candidate.
 > Swift Package Manager never resolves a pre-release from a version range, so **Up to Next Major Version**
 > keeps you on production releases. To try a pre-release, pin its exact tag, and switch back to the
-> production rule once the final version (for example `11.1.19`) is published. Do not ship pre-releases in
+> production rule once the final `X.Y.Z` version is published. Do not ship pre-releases in
 > production apps.
 
 ### Package.swift
@@ -196,7 +196,7 @@ To install a **pre-release**, pin the dependency to its exact tag instead:
 dependencies: [
     .package(
         url: "https://github.com/Idmission-LLC/identityMediumSDK-SPM",
-        exact: "11.1.19-rc.1"
+        exact: "X.Y.Z-rc.n"      // replace with the pre-release tag
     )
 ],
 ```
@@ -1097,42 +1097,47 @@ transaction end to end.
 
 ## Framework sizes
 
-Measured at **11.1.17**. Uncompressed on-disk size of the `arm64` device slice. **Not** App Store download size — thinning and
+Measured at **11.1.19**. Uncompressed on-disk size of the `arm64` device slice. **Not** App Store download size — thinning and
 compression reduce the delivered figure substantially.
 
 | Framework | Size | Included with |
 |:---|---:|:---|
-| `IDentityMediumSDK` | 25.9 MB | `IDentityMediumSDK` |
+| `IDentityMediumSDK` | 22.3 MB | `IDentityMediumSDK` |
 | `IDCaptureMedium` | 0.9 MB | `IDentityMediumSDK` |
 | `SelfieCaptureMedium` | 1.1 MB | `IDentityMediumSDK` |
-| `IDentityMediumModels` | 21.1 MB | `IDentityMediumModels` (optional) |
+| `IDentityMediumModels` | 25.0 MB | `IDentityMediumModels` (optional) |
 | `IDentityMediumNFC` | 4.2 MB | `IDentityMediumNFC` (optional) |
 | `FingerPrintCaptureMedium` | 7.5 MB | `FingerPrintCaptureMediumSDK` (optional) |
 | `SignatureCaptureMedium` | 0.3 MB | `SignatureCaptureMediumSDK` (optional) |
 | `VoiceCaptureMedium` | 0.2 MB | `VoiceCaptureMediumSDK` (optional) |
 
-Required products total **27.9 MB**; every optional product adds to that. Omit `IDentityMediumModels` to save
-21.1 MB of app binary at the cost of a model download on first run.
+Required products total **24.3 MB**; every optional product adds to that. Omit `IDentityMediumModels` to save
+25.0 MB of app binary at the cost of a model download on first run.
 
 ---
 
 ## Versioning and releases
 
-Releases are published as Git tags of the form `MAJOR.MINOR.PATCH` — for example `11.1.17`. Pin with
-`from: "11.1.17"` to accept compatible updates, or pin `exact: "11.1.17"` if your release process requires a
+Releases are published as Git tags of the form `MAJOR.MINOR.PATCH` — for example `11.1.19`. Pin with
+`from: "11.1.19"` to accept compatible updates, or pin `exact: "11.1.19"` if your release process requires a
 frozen dependency graph.
 
-Pre-releases are published as `MAJOR.MINOR.PATCH-rc.N` tags — for example `11.1.19-rc.1` — ahead of the
-matching production release. They are only resolved when pinned exactly; see [Installation](#installation).
+Pre-releases are published as `X.Y.Z-rc.n` tags ahead of the matching `X.Y.Z` production release.
+Each new release candidate increments `n`. They are only resolved when pinned exactly; see [Installation](#installation).
 
 The three IDmission SPM packages are versioned in lockstep. If you integrate more than one, use the same
 version across all of them.
 
 ### Release notes
 
-#### 11.1.17
-- Added support for Swift Package Manager (SPM).
-- Added Dynamic IDCapture functionality.
+#### 11.1.19 (22 October 2026)
+- **Dynamic ID Capture & Barcode Handling:** Enabled flexible two-sided ID capture that automatically detects the front and back of an ID in any order, while seamlessly processing barcode data on either side.
+- **Dynamic ID Orientation & Auto-Correction:** Introduced a `.dynamic` capture mode that automatically adapts capture guidelines for horizontal or vertical IDs in real time and automatically rotates the final captured image to an upright orientation.
+- **NFC Support:** Added optional NFC chip reading capabilities for supported IDs and passports through the dedicated `IDentityMediumNFC` framework, allowing integrators to include or exclude NFC functionality based on application requirements.
+- **NFC Data Extraction & Modular Framework:** Added support for extracting NFC chip data and artifacts, including face images and digital signatures, through the modular NFC framework.
+- **Server Payload & Swagger v4 Support:** Updated API data models to Swagger v4 specifications to support transmitting extracted NFC chip artifacts, including face images and digital signatures, directly to the backend server.
+- **iOS Medium SDK Size Reduction:** Reduced SDK size by replacing the third-party MLKit text recognition dependency with lightweight OCR models, which can be embedded in the app or downloaded from the server.
+- **Swift Package Manager (SPM) Support (iOS):** Added SPM integration support for the Medium SDK. Lite and Liveness already support SPM.
 
 ---
 
