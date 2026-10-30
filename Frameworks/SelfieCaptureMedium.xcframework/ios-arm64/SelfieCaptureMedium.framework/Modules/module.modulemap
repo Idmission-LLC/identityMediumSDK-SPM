@@ -1,4 +1,0 @@
-framework module SelfieCaptureMedium {
-  header "SelfieCaptureMedium-Swift.h"
-  requires objc
-}
